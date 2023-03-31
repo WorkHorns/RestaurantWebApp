@@ -1,5 +1,5 @@
 //2 компонет для работы Redux
-//Action возвращает обьект который не надо прописывать в ручную каждый раз
+//Action возвращает state обьект который не надо прописывать в ручную каждый раз
 const menuLoaded = (newMenu) => {
     return {
         type: 'MENU_LOADED',
@@ -23,10 +23,17 @@ const deleteFromCart = (id) => {
         payload: id
     };
 };
+const sumFromCart = (sum) => {
+    return {
+        type: 'SUM_FROM_CART',
+        sumItem: sum
+    };
+};
 
 export {
     menuLoaded,
     menuRequested,
     addedToCart,
-    deleteFromCart
+    deleteFromCart,
+    sumFromCart
 };

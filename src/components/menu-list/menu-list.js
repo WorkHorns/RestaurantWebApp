@@ -41,7 +41,7 @@ class MenuList extends Component {
 const mapStateToProps = (state) => {
     return {
         menuItems: state.menu,
-        loading: state.loading,
+        loading: state.loading
     }
 }
 

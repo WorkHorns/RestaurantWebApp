@@ -4,7 +4,10 @@ const initialState = {
     //Для проверки отображения можно передать данные из db сюда
     menu: [],
     loading: true,
-    items: []
+    items: [],
+    sum: [
+        50
+    ]
 
 }
 //Функция котороя принимает какой-то state и action
@@ -49,6 +52,10 @@ const reduser = (state = initialState, action) => {
                     ...state.items.slice(0,itemIndex),
                     ...state.items.slice(itemIndex + 1)
                 ]
+            };
+        case 'SUM_FROM_CART':
+            return {
+                ...state
             };
         default:
             return state;
